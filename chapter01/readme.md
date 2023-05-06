@@ -9,3 +9,6 @@ fork() 함수는 프로세스의 id , 즉 pid를 반환하는데 이 때 부모 
 
 사용 형태는 int execve (const char *filename, char *const argv [], char *const envp[]) 
 로 (파일 이름, 인수 목록, 환경 설정 목록)을 넘겨줍니다.
+
+#### exit() 함수
+프로그램 종료는 _exit() 함수를 사용합니다. 내부에서는 'exit_group()' 시스템 콜을 호출합니다. 이 함수를 이용하면 프로세스에 할당된 메모리 전부를 회수합니다.
